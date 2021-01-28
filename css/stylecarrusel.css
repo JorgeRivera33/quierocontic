@@ -1,0 +1,89 @@
+
+#c_s h1 { margin:150px auto 30px auto; text-align:center}
+#c_s img { padding:5px; border:2px solid gray; background-color:rgba(255, 255, 255, .5);border-radius:5px; width:300px;}
+#c_s h3{border:0px solid black; text-align:center;font-family: 'Patua One', cursive;color:black;}
+.cascade-slider_container {
+  position: relative;
+  width: 600px;
+  height: 380px;
+  margin: 0 auto;
+  margin-top:25px;
+}
+
+.cascade-slider_item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%) scale(0.3);
+  transition: all 1s ease;
+  opacity: 0;
+  z-index: -1;
+}
+
+.cascade-slider_item.next {
+  left: 70%;
+  transform: translateY(-50%) translateX(-150%) scale(0.6);
+  opacity: 1;
+  z-index: 1;
+}
+
+.cascade-slider_item.prev {
+  left: 30%;
+  transform: translateY(-50%) translateX(50%) scale(0.6);
+  opacity: 1;
+  z-index: 1;
+}
+
+.cascade-slider_item.now {
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%) scale(1);
+  opacity: 1;
+  z-index: 5;
+}
+
+.cascade-slider_arrow {
+  display: inline-block;
+  position: absolute;
+  top: 80%;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.cascade-slider_arrow-left {
+  left: 0; 
+  background: url("../img/flecha.png");
+  background-size:100% 100%;
+  transform:rotate(-90deg);
+  width:50px;
+  height:60px;
+}
+
+.cascade-slider_arrow-right {
+  right: 0; 
+  background: url("../img/flecha.png");
+  background-size:100% 100%;
+  transform:rotate(90deg);
+  width:50px;
+  height:60px;
+}
+
+.cascade-slider_nav {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+}
+
+.cascade-slider_dot {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: #ddd;
+  list-style: none;
+  cursor: pointer;
+}
+
+.cascade-slider_dot:hover { background: #555; }
+
+.cascade-slider_dot.cur { background: #555; }
